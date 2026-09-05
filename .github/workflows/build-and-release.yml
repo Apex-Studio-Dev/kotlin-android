@@ -91,6 +91,9 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     if: >
       github.event_name == 'push' &&
       github.repository == 'Apex-Studio-Dev/kotlin-android' &&
